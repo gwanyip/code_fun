@@ -1,0 +1,42 @@
+/* CSS MAGIC */
+
+body {
+	background: #D0D0D0;
+}
+
+.main {
+	width: 920px;
+	margin: 60px auto 0;
+}
+
+ul.gallery {
+	width: 730px;
+	margin: 0 auto;
+}
+
+ul.gallery li {
+	float: left;
+	margin: 0 10px;
+	padding: 10px;
+	border: 1px solid #fff;
+	list-style: none;
+	background-color: #fff;
+}
+
+ul.gallery li a img {
+	float: left;
+	width: 200px;
+	-webkit-transition: -webkit-transform 0.2s ease-in-out;
+	-moz-transition: -moz-transform 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out;
+}
+
+ul.gallery li a:hover img {
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+	-moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}

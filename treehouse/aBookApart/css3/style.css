@@ -1,0 +1,30 @@
+body {
+	font-family: arial;
+	font-weight: bold;
+}
+
+.container {
+	width: 960px;
+	margin: 100px auto;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+a.foo {
+	padding: 5px 10px;
+	background: #9c3;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+a.foo:hover,
+a.foo:focus {
+	background: #690;
+	color: #030;
+	padding: 10px 20px;
+}
