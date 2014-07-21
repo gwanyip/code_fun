@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="js/flexslider.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/lt-vop-slider.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<div class="lt-vop-slider">
+
+	<div data-role="page" class="page">
+		<div class="valueofplayslider-container">
+            <div class="valueofplayslider flexslider">
+
+		        <ul class="slides" style="border:none;">
+		             <li>
+		                <img alt="" src="img/valueofplay1.jpg" />
+		                <h2>2-in1 Snug 'n Secure Swing - Blue</h2>
+		                <h3>Age 9 mo - 4 years</h3>
+		                <p>This outdoor baby swing is the perfect addition to any swing set. A t-bar and straps hold the child securely in place and can be removed as the child grows. It's a baby swing and a toddler swing in one!</p>
+		                <a class="valueofplay-moreinfo" href="#">
+		                    More Info   
+		                </a>
+		            </li>
+		            <li>
+		                <img alt="" src="img/valueofplay2.jpg" />
+		                <h2>Activity Garden</h2>
+		                <h3>Age 6 mo - 3 years</h3>
+		                <p>This infant Activity Garden incorporates a variety of baby toys and activities to develop motor skills and cognitive ability. Infants will love the stimulating colors, shapes and textures. This activity gym can be configured in different ways to keep play exciting.</p>
+		                <a class="valueofplay-moreinfo" href="#">
+		                    More Info   
+		                </a>
+		            </li>
+		            <li>
+		                <img alt="" src="img/valueofplay3.jpg" />
+		                <h2>Activity Garden Rock 'n' Spin</h2>
+		                <h3>Age 9 mo - 3 years</h3>
+		                <p>Little Tikes Activity Garden Rock ‘n Spin combines a fun toy with an engaging design to help your little one grow and develop. The bug legs adjust down for stationary play, or up to create a rocking toy. The cute bug design is certain to catch a child's eye as well as helping their co-ordination and balance skills.</p>
+		                <a class="valueofplay-moreinfo" href="#">
+		                    More Info   
+		                </a>
+		            </li>
+		        </ul>
+    		</div>   
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	    $(window).load(function() {
+	        $('.valueofplayslider').flexslider({
+	            animation: "slide"
+	          });
+	    });
+	</script>
+
+
+
+	<script type="text/javascript">
+	    jQuery(document).bind("pageinit", function(event) {
+
+	    jQuery('.valueofplayslider').flexslider({directionNav: false});
+	    });
+	</script>
+</div>
+
+
+</body>
+
+</html>
