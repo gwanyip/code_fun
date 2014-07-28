@@ -3,4 +3,5 @@ p {
   width: 40px; }
 
 .hello {
-  height: 10px; }
+  height: 10px;
+  color: red; }
