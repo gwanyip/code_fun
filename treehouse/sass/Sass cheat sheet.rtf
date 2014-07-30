@@ -1,0 +1,135 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww11180\viewh14600\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs28 \cf0 \ul \ulc0 Getting started with Sass
+\b0 \ulnone \
+\
+\ul Create sass file\ulnone \
+In terminal, in the folder of your sass file: sass \'97watch .\
+\
+\ul Variables:\ulnone \
+defined by: $\'92variable name\'92: [value]\
+\
+\ul Nesting selectors:\ulnone \
+\
+.blog \{\
+	> h1 \{\
+		color: red;\
+	\}\
+\}\
+\
+
+\i complies as: .blog > h1;
+\i0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 .blog \{\
+	.entry \{\
+		p \{\
+			html.csscolumns & \{\
+				margin: 10px;\
+			\}\
+		\}\
+	\}\
+\}\
+\
+
+\i complies as: html.csscolumns .blog .entry p \{\
+	margin: 10px\
+\}
+\i0 \
+\
+(& at the end puts that code at the start)\
+\
+.blog \{\
+	.entry \{\
+		p \{\
+			&:hover \{\
+				color: blue;\
+			\}\
+		\}\
+	\}\
+\}\
+\
+
+\i complies as: .blog .entry p:hover \{\
+	color: blue;\
+\}
+\i0 \
+\
+(& at the end puts that code at the end)\
+\
+\ul Mixins\ulnone \
+\
+Create a mixin:\
+\
+@mixin \'91name of mixin\'92(arguments) \{\
+	color: blue;\
+	height: 10px;\
+\}\
+\
+Call a mixin:\
+\
+.class \{\
+	@include \'91name of mixin\'92(arguments);\
+\}\
+\
+If you use the same code 2 - 3 times create a mixin.\
+Great for logic.\
+\
+@mixin roundy($radius, $color) \{\
+	border-radius: $radius;\
+	border-top-right-radius: $radius * 2;\
+	border-bottom-left-radius: $radius * 2;\
+	a \{\
+		color: $color;\
+	\}\
+\}\
+\
+.box \{\
+	@include roundy(4px, blue);\
+\}\
+\
+complies to:\
+\
+.box \{\
+  border-radius: 4px;\
+  border-top-right-radius: 8px;\
+  border-bottom-left-radius: 8px; \}\
+  .box a \{\
+    color: blue; \}\
+\
+\ul Extend\ulnone \
+\
+%bar \{\
+	height: 14px;\
+	font-size: 10px;\
+	> div \{\
+		float: left;\
+		clear: none;\
+	\}\
+\}\
+\
+.menu \{\
+	@extend %bar;\
+	background: #345;\
+\}\
+\
+Use % as a placeholder, so it won\'92t show up in your CSS i.e. \'91bar\'92 doesn\'92t show up below\
+\
+Complies to:\
+\
+.menu, .nav \{\
+  height: 14px;\
+  font-size: 10px; \}\
+  .menu > div, .nav > div \{\
+    float: left;\
+    clear: none; \}\
+\
+.menu \{\
+  background: #345; \}\
+\
+@extends just replicates/extends the code associated with whatever you\'92re referencing}
