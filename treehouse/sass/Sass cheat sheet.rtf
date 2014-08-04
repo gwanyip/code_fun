@@ -1,7 +1,7 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-\margl1440\margr1440\vieww11180\viewh14600\viewkind0
+\margl1440\margr1440\vieww13160\viewh13500\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
 \f0\b\fs28 \cf0 \ul \ulc0 Getting started with Sass
@@ -25,8 +25,7 @@ defined by: $\'92variable name\'92: [value]\
 \i complies as: .blog > h1;
 \i0 \
 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
-\cf0 .blog \{\
+.blog \{\
 	.entry \{\
 		p \{\
 			html.csscolumns & \{\
@@ -132,4 +131,27 @@ Complies to:\
 .menu \{\
   background: #345; \}\
 \
-@extends just replicates/extends the code associated with whatever you\'92re referencing}
+@extends just replicates/extends the code associated with whatever you\'92re referencing\
+\
+\ul Color palettes\ulnone \
+\
+Color functions:\
+Lighten: $color: lighten(#345, 20%);\
+Darken: $color: darken(#345, 20%);\
+Complement: $color: complement(#345);\
+Desaturate: $color:desaturate(#345, 30%);\
+\
+\ul File structure\ulnone \
+To import files, use @import \'93filename.scss\'94, make sure the files are in the right order\
+\
+@import "_reset.scss"\
+\
+//Defining\
+@import "_variables.scss";\
+@import "_mixins.scss";\
+\
+// Global Styles\
+@import "_globals.scss";\
+\
+//Page Specifics\
+@import "/pages/_about_us.scss";}

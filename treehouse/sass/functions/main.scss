@@ -1,0 +1,29 @@
+$color: #234;
+
+@function pixify($value) {
+	@return unquote($value + "px")
+}
+
+div {
+	height: 100px;
+	width: 255px;
+	border: 1px solid black;
+}
+.color {
+	background: $color;
+}
+.red, .blue, .green {
+	float: left;
+}
+.red {
+	background: red;
+	width: pixify(red($color));
+}
+.blue {
+	background: blue;
+	width: pixify(blue($color));
+}
+.green {
+	background: green;
+	width: pixify(green($color));
+}
